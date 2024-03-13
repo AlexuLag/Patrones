@@ -10,7 +10,7 @@ namespace FactoryMethod
     {
         public override string HacerSonido()
         {
-            return "Tweet!";
+            return "pio!";
         }
     }
 }

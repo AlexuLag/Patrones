@@ -10,6 +10,6 @@ Animal miPerro = perroFactory.CrearAnimal();
 Animal miGato = gatoFactory.CrearAnimal();
 Animal miPajaro = pajaroFactory.CrearAnimal();
 
-Console.WriteLine(miPerro.HacerSonido());  // Salida: Woof!
-Console.WriteLine(miGato.HacerSonido());   // Salida: Meow!
-Console.WriteLine(miPajaro.HacerSonido());  // Salida: Tweet!
+Console.WriteLine(miPerro.HacerSonido());  
+Console.WriteLine(miGato.HacerSonido());   
+Console.WriteLine(miPajaro.HacerSonido());  
