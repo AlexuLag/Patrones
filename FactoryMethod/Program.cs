@@ -2,13 +2,9 @@
 // Uso del Factory Method con diferentes tipos de animales
 using FactoryMethod;
 
-IAnimalFactory perroFactory = new PerroFactory();
-IAnimalFactory gatoFactory = new GatoFactory();
-IAnimalFactory pajaroFactory = new PajaroFactory();
-
-Animal miPerro = perroFactory.CrearAnimal();
-Animal miGato = gatoFactory.CrearAnimal();
-Animal miPajaro = pajaroFactory.CrearAnimal();
+Animal miPerro = AnimalFactory.CrearAnimalPorNombre("Perro");
+Animal miGato = AnimalFactory.CrearAnimalPorNombre("Gato");
+Animal miPajaro = AnimalFactory.CrearAnimalPorNombre("Pajaro");
 
 Console.WriteLine(miPerro.HacerSonido());  
 Console.WriteLine(miGato.HacerSonido());   
