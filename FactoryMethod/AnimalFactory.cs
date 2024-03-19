@@ -8,7 +8,7 @@ namespace FactoryMethod
 {
     class AnimalFactory
     {
-        private  static Animal CrearAnimal<T>() where T : Animal, new()
+        private  static IAnimalFactory CrearFabrica<T>() where T : IAnimalFactory, new()
         {
             return new T();
         }
@@ -16,17 +16,17 @@ namespace FactoryMethod
         public static Animal CrearAnimalPorNombre(string nombre)
         {
             Animal animal;
+
             switch (nombre)
             {
-                case "Perro":  
-                    animal =  CrearAnimal<Perro>();
+                case "Perro":
+                    animal = CrearFabrica<PerroFactory>().CrearAnimal();
                     break;
-
                 case "Gato":
-                    animal =  CrearAnimal<Gato>();
+                    animal = CrearFabrica<GatoFactory>().CrearAnimal();
                     break;
                 case "Pajaro":
-                    animal = CrearAnimal<Pajaro>();
+                    animal = CrearFabrica<PajaroFactory>().CrearAnimal();
                     break;
                 default:
                         throw  new NotImplementedException("el animal especificado no existe");
